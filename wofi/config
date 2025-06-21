@@ -1,0 +1,5 @@
+allow_images = true
+width = 50%
+height = 50%
+hide_scroll = true
+columns = 2
