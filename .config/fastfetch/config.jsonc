@@ -1,0 +1,21 @@
+{
+  "logo": {
+    "type": "small",
+    "source": "arch"
+  },
+
+  "display": {
+    "key": { "width": 10 },
+    "separator": " "
+  },
+
+  "modules": [
+    "title",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "memory",
+  ]
+}
