@@ -77,12 +77,13 @@ tooltip {
 
 /* Shared module block styling (container look) */
 #cpu,
+#memory,
+#disk,
+#battery,
+#workspaces,
 #clock,
 #pulseaudio,
 #pulseaudio.microphone,
-#workspaces,
-#memory,
-#disk,
 #tray {
     background: #1e1e2e;
     opacity: 1.0;
@@ -94,18 +95,10 @@ tooltip {
     margin-left: 5px;
 }
 
-/* Workspaces module container */
-#workspaces {
-    background: #1e1e2e;
-    border-radius: 13px;
-    margin-left: 5px;
-    padding-right: 0px;
-}
-
-/* Clock styling */
-#clock {
-    color: #a6e3a1;
-    border-radius: 0px 13px 13px 0px;
+/* CPU module styling */
+#cpu {
+    border-radius: 13px 0px 0px 13px;
+    padding-left: 10px;
     margin-right: 0px;
     margin-left: 0px;
 }
@@ -121,8 +114,46 @@ tooltip {
 /* Disk module styling */
 #disk {
     color: #f9e2af;
+    border-radius: 0px 0px 0px 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* Battery styling */
+#battery {
+    color: #161320;
     border-radius: 0px 13px 13px 0px;
     margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* Battery (charging) styling */
+#battery.charging, #battery.plugged {
+    color: #161320;
+    border-radius: 0px 13px 13px 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* Battery (critical) styling */
+#battery.critical:not(.charging) {
+    color: #161320;
+    border-radius: 0px 13px 13px 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Workspaces module container */
+#workspaces {
+    background: #1e1e2e;
+    border-radius: 13px;
+    margin-left: 5px;
+    padding-right: 0px;
 }
 
 /* Audio output (speaker) module */
@@ -141,11 +172,10 @@ tooltip {
     margin-right: 0px;
 }
 
-/* CPU module styling */
-#cpu {
-    border-radius: 13px 0px 0px 13px;
-    padding-left: 10px;
+/* Clock styling */
+#clock {
+    color: #a6e3a1;
+    border-radius: 0px 13px 13px 0px;
     margin-right: 0px;
     margin-left: 0px;
 }
-
